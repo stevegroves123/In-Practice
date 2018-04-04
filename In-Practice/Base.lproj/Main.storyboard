@@ -28,6 +28,7 @@
                                 </wkWebViewConfiguration>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="cMs-o1-RJy" appends="YES" id="I11-Hc-iQN"/>
+                                    <outletCollection property="gestureRecognizers" destination="Cd2-dA-uVi" appends="YES" id="F8I-Z7-QZP"/>
                                 </connections>
                             </wkWebView>
                         </subviews>
@@ -42,6 +43,7 @@
                     </view>
                     <connections>
                         <outlet property="swipeBack" destination="cMs-o1-RJy" id="L58-gY-2nf"/>
+                        <outlet property="swipeForward" destination="Cd2-dA-uVi" id="D0b-Fz-Alo"/>
                         <outlet property="webView" destination="19T-W6-pz0" id="VQv-zy-Q7Z"/>
                     </connections>
                 </viewController>
@@ -49,6 +51,11 @@
                 <swipeGestureRecognizer direction="right" id="cMs-o1-RJy">
                     <connections>
                         <action selector="swipeBackAction:" destination="BYZ-38-t0r" id="nB5-4t-xxv"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="Cd2-dA-uVi">
+                    <connections>
+                        <action selector="swipeForwardAction:" destination="BYZ-38-t0r" id="y8H-Wx-Fy5"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>

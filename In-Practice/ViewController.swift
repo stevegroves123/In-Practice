@@ -11,6 +11,7 @@ import WebKit
 
 class ViewController: UIViewController, WKNavigationDelegate {
 
+    @IBOutlet weak var swipeForward: UISwipeGestureRecognizer!
     @IBOutlet weak var swipeBack: UISwipeGestureRecognizer!
     @IBOutlet weak var webView: WKWebView!
     
@@ -19,6 +20,13 @@ class ViewController: UIViewController, WKNavigationDelegate {
             webView.goBack()
         }
     }
+    
+    @IBAction func swipeForwardAction(_ sender: UISwipeGestureRecognizer) {
+        if webView.canGoForward {
+            webView.goForward()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
